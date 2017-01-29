@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="creation_database_name">KMManagerDB</string>
+<string name="creation_table_category">
+CREATE TABLE CATEGORIA (
+	id INTEGER PRIMARY KEY AUTOINCREMENT   NOT NULL ,
+	nombre TEXT NOT NULL ,
+	descripcion TEXT NOT NULL ,
+	codigo_moneda TEXT NOT NULL ,
+	activo INTEGER NOT NULL
+);
+</string>
+<string name="creation_table_account">
+CREATE TABLE CUENTA (
+	id INTEGER PRIMARY KEY AUTOINCREMENT   NOT NULL ,
+	nombre TEXT NOT NULL ,
+	monto_apertura REAL NOT NULL ,
+	codigo_tipo TEXT NOT NULL ,
+	codigo_moneda TEXT NOT NULL ,
+	activo INTEGER NOT NULL
+);
+</string>
+<string name="creation_table_entries">
+CREATE TABLE ASIENTO (
+	id INTEGER PRIMARY KEY AUTOINCREMENT   NOT NULL ,
+	monto REAL NOT NULL ,
+	fecha DATE NOT NULL ,
+	titulo TEXT NOT NULL ,
+	descripcion TEXT NOT NULL ,
+	tipo TEXT NOT NULL ,
+	activo TEXT NOT NULL ,
+	CUENTA_id INTEGER NOT NULL ,
+	CATEGORIA_id INTEGER NOT NULL ,
+	FOREIGN KEY (CUENTA_id) REFERENCES CUENTA(id),
+	FOREIGN KEY (CATEGORIA_id) REFERENCES CATEGORIA(id)
+);
+</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="70dp"
+    >
+
+    <Button
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:text="Report"
+    android:drawableTop="@drawable/view_investment"
+    android:onClick="onButtonClick"
+    android:id="@+id/btReport"
+        android:layout_below="@+id/btCategory"
+        android:layout_marginTop="12dp"
+        android:layout_alignRight="@+id/btAccounts"
+        android:layout_alignEnd="@+id/btAccounts"
+        android:layout_alignLeft="@+id/btCategory"
+        android:layout_alignStart="@+id/btCategory" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Accounts"
+        android:drawableTop="@drawable/view_investment_account"
+        android:onClick="onButtonClick"
+        android:id="@+id/btAccounts"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:drawableTop="@drawable/view_income_categories"
+        android:onClick="onButtonClick"
+        android:id="@+id/btCategory"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp" />
+
+</RelativeLayout>
